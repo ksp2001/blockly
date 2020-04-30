@@ -13,3 +13,12 @@ Blockly.Blocks['color'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.JavaScript['color'] = function(block) {
+  var dropdown_color = block.getFieldValue('color');
+  var dropdown_status = block.getFieldValue('status');
+  var value_color = Blockly.JavaScript.valueToCode(block, 'Color', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'hello!';
+  return code;
+};
