@@ -14,6 +14,8 @@ Blockly.Blocks['color'] = {
   }
 };
 
+
+
 Blockly.JavaScript['color'] = function(block) {
   var dropdown_color = block.getFieldValue('color');
   var dropdown_status = block.getFieldValue('status');
