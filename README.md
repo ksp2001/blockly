@@ -6,6 +6,8 @@ More specifically, dabbling with creating custom blocks, and creating tooling fo
 
 A lot of this code will be tutorial follow throughs, or self dabbling and not an entirety of a project. It is more of a dipstick to see how far blockly can go and what I can do with it on a higher level before actually taking up a project, and I'm very excited !
 
+In order to run the code, clone this repository by `git clone {url}` (get url from the top), navigate into the blockly folder, and open up `index.html`!
+
 ### Prerequisites 🧺
 
 None at the moment.
