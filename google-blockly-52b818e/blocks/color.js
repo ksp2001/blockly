@@ -23,10 +23,10 @@ Blockly.JavaScript['color'] = function(block) {
   var code = '...\n';
   if (dropdown_color==='all') {
     if (dropdown_status == 'on') {
-      code = "document.getElementById('red').style.backgroundColor='red';document.getElementById('yellow').style.backgroundColor='yellow';document.getElementById('green').style.backgroundColor='green';"
+      code = "document.getElementById('red').style.backgroundColor='red'; document.getElementById('yellow').style.backgroundColor='yellow'; document.getElementById('green').style.backgroundColor='green';"
     }
     else {
-      code = "document.getElementById('red').style.backgroundColor='white';document.getElementById('yellow').style.backgroundColor='white';document.getElementById('green').style.backgroundColor='white';"
+      code = "document.getElementById('red').style.backgroundColor='white'; document.getElementById('yellow').style.backgroundColor='white'; document.getElementById('green').style.backgroundColor='white';"
     }
   }
   else {

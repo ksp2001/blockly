@@ -39,7 +39,8 @@ Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 function showCode() {
   Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
   var code = Blockly.JavaScript.workspaceToCode(workspace);
-  alert(code);
+  //alert(code);
+  document.getElementById('my_code').innerHTML = code;
 }
 
 function runCode() {
@@ -55,3 +56,7 @@ function runCode() {
     alert(e);
   }
 }
+
+// while (true) {
+//   setTimeout(showCode,5000);
+// }
