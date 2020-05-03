@@ -22,8 +22,14 @@
       border-radius: 50%;
       background-color: #fff;
       border: solid 1px black;
-      float: left;
+      /* float: left; */
+      display:inline-block;
       margin:10px;
+    }
+    #my_code {
+      height:10rem;
+      border:solid 0.5px #eee;
+      width:30%;
     }
   </style>
 </head>
@@ -54,7 +60,10 @@
     <div id="red" class="light"></div>
     <div id="yellow" class="light"></div>
     <div id="green" class="light"></div>
+    <br>
   </div>
+  <b>Code</b>
+  <div id ="my_code"></div>
   <script src="workspace.js"></script>
 </body>
 </html>
