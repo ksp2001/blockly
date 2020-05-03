@@ -37,17 +37,17 @@ var workspaceBlocks = document.getElementById("workspaceBlocks");
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 
 function showCode() {
-  Blockly.Javascript.INFINITE_LOOP_TRAP = null;
-  var code = Blockly.Javascript.workspaceToCode(workspace);
+  Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+  var code = Blockly.JavaScript.workspaceToCode(workspace);
   alert(code);
 }
 
 function runCode() {
   window.LoopTrap = 1000;
-  Blockly.Javascript.INFINITE_LOOP_TRAP = 
+  Blockly.JavaScript.INFINITE_LOOP_TRAP = 
     'if (--window.LoopTrap == 0) throw "Infinite Loop."\n';
-  var code = Blockly.Javascript.workspaceToCode(workspace);
-  Blockly.Javascript.INFINITE_LOOP_TRAP = null;
+  var code = Blockly.JavaScript.workspaceToCode(workspace);
+  Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
   try {
     eval(code);
   }
