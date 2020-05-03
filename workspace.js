@@ -35,3 +35,23 @@ var workspaceBlocks = document.getElementById("workspaceBlocks");
 
 /* Load blocks to workspace. */
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
+
+function showCode() {
+  Blockly.Javascript.INFINITE_LOOP_TRAP = null;
+  var code = Blockly.Javascript.workspaceToCode(workspace);
+  alert(code);
+}
+
+function runCode() {
+  window.LoopTrap = 1000;
+  Blockly.Javascript.INFINITE_LOOP_TRAP = 
+    'if (--window.LoopTrap == 0) throw "Infinite Loop."\n';
+  var code = Blockly.Javascript.workspaceToCode(workspace);
+  Blockly.Javascript.INFINITE_LOOP_TRAP = null;
+  try {
+    eval(code);
+  }
+  catch(e){
+    alert(e);
+  }
+}
