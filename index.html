@@ -2,11 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Blockly Demo: Fixed Blockly</title>
-  <script src="blockly_compressed.js"></script>
-  <script src="blocks_compressed.js"></script>
-  <script src="msg/js/en.js"></script>
-  <script src="blocks/color.js"></script>
+  <title>Colour Picker</title>
+  <script src="google-blockly-52b818e/blockly_compressed.js"></script>
+  <script src="google-blockly-52b818e/javascript_compressed.js"></script>
+  <script src="google-blockly-52b818e/msg/js/en.js"></script>
+  <script src="google-blockly-52b818e/blocks/color.js"></script>
   <style>
     body {
       background-color: #fff;
@@ -16,10 +16,30 @@
       font-weight: normal;
       font-size: 140%;
     }
+    .light {
+      height:30px;
+      width:30px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: solid 1px black;
+      /* float: left; */
+      display:inline-block;
+      margin:10px;
+    }
+    #my_code {
+      height:10rem;
+      border:solid 0.5px #eee;
+      width:30%;
+    }
   </style>
 </head>
 <body>
   <h1><a href="https://developers.google.com/blockly/">Blockly</a></h1><br>
+
+  <p>
+  <button onClick="showCode()">Show Javascript</button>
+  <button onClick="runCode()">Run Javascript</button>
+  </p>
 
   <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
 
@@ -35,6 +55,15 @@
       <field name="status">on</field>
     </block>
   </xml>
+
+  <div id="lights">
+    <div id="red" class="light"></div>
+    <div id="yellow" class="light"></div>
+    <div id="green" class="light"></div>
+    <br>
+  </div>
+  <b>Code</b>
+  <div id ="my_code"></div>
   <script src="workspace.js"></script>
 </body>
 </html>
